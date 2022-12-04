@@ -1,0 +1,227 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.container {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  flex-wrap: wrap;
+  border: 5px solid black;
+  max-width: 78.8%;
+}
+
+.item {
+  width: 650px;
+  height: 150px;
+  background-color: rgb(168, 50, 50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 0 50px;
+}
+
+.loadingWrapper {
+  width: 150px;
+  position: relative;
+}
+
+.loadingOne {
+  background-color: rgb(170, 36, 36);
+}
+
+.rotateTwo {
+  background-color: rgb(170, 36, 36);
+}
+
+.loadingOne p {
+  text-transform: uppercase;
+  background: rgba(236, 113, 113, 0.5);
+  color: #ffffff;
+  font-size: 15px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.slide {
+  width: 0;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  animation: slide 5s infinite linear;
+}
+
+.slideOne {
+  bottom: 19px;
+}
+
+.slideTwo {
+  top: 19px;
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+    opacity: 1;
+  }
+  25% {
+    width: 25%;
+    opacity: 1;
+  }
+  50% {
+    width: 50%;
+    opacity: 1;
+  }
+  75% {
+    width: 75%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+.loadingTwo p {
+  text-transform: uppercase;
+  background: rgba(236, 113, 113, 0.5);
+  color: #ffffff;
+  padding: 0 30px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.progressBar {
+  width: 0;
+  max-width: 150px;
+  height: 19px;
+  background-color: #fff;
+  position: absolute;
+  left: 40%;
+  animation: progressBar 10s infinite linear;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0%;
+    z-index: 2;
+    opacity: 1;
+  }
+  50% {
+    width: 50%;
+    z-index: 2;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+  }
+}
+
+.squareWrapper {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.534);
+}
+.circleDot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  animation: rot 5s infinite linear;
+}
+
+.squareProgress {
+  width: 0;
+  height: 70%;
+  position: absolute;
+  background-color: #fff;
+  animation: squareProgress 5s infinite linear;
+}
+
+@keyframes rot {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 0;
+    left: 90%;
+  }
+  50% {
+    top: 90%;
+    left: 90%;
+  }
+
+  75% {
+    top: 90%;
+    left: 0;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes squareProgress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.rotateOne {
+  position: relative;
+}
+
+.rotate {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: rotate 5s infinite linear;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.circle.circleOp {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
